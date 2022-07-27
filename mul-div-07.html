@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of triangle</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <style>
+        .back{
+            background-color: black;
+            font-size: 20px;
+            color: chocolate;
+            padding: 25px;
+            width :400px;
+            letter-spacing: 3px;
+            border-radius: 10px;
+        
+        }
+        .jumbotron{
+            background-color: darkgray;
+                       
+        }
+    </style>
+ 
+</head>
+<body>
+    <div class="jumbotron">
+      <h1>Multiplication and Division</h1>
+      
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter 1 st Number:</label>
+          <input type="text" class="form-control" id="num1" aria-describedby="emailHelp">             
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Enter 2 nd Number</label>
+          <input type="text" class="form-control" id="num2">
+        </div>        
+        <button type="button" class="btn btn-warning btn-md mt-5" onclick="mul()">Multiplication</button>
+        <button type="button" class="btn btn-danger btn-md mt-5" onclick="div()">Division</button>
+      </form>
+      <h4 class="mt-5">Result</h4>
+      <div id="ans" >
+        
+      </div>
+
+    </div>
+
+</body>
+<script>
+    function mul(){
+        var a = Number(document.getElementById("num1").value);
+        var b = Number(document.getElementById("num2").value);  
+        
+        var mul,temp;
+        mul = a*b;
+       
+        temp = "Multiplication : "+mul;        
+        document.getElementById("ans").className = "back";
+        document.getElementById("ans").innerHTML = temp;
+   
+    }
+    function div(){
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;       
+        var div,temp;
+        
+        div = a/b; 
+        temp = "Divison : "+div.toFixed(3);        
+        document.getElementById("ans").className = "back";
+        document.getElementById("ans").innerHTML = temp;
+   
+    }
+</script>
+</html>
